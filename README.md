@@ -1,5 +1,5 @@
 # C64Cartridge
-A C64 and C128 cartridge that allow multiple images,
+A C64 and C128 cartridge that allow multiple cartridge images inb one physical cartridge.
 
 ![Cartridge](http://i.imgur.com/pkQG7xn.png)
 
@@ -7,13 +7,17 @@ A C64 and C128 cartridge that allow multiple images,
 A simple cartridge which can store several switch selecatble images. The type of images is also switch selectable.
 
 Due to a stupid design mistake the upper and lower switch is not independent which means that only in total 16 locations can be used. But since some cartridges make use of only the upper or only the lower part they can shar the same index.
-The design mistake can be circumvented using 8 diodes making the wire-ORing work. But since I have no real use for that many cartridges I do not intend to do another production run and test it.
+The design mistake can be circumvented using 8 diodes making the wire-ORing work. But since I have no real use for that many cartridges I do not intend to do another production run and test it. Another way is to skip one of the rotary switches and install a short jumper wire between the middle terminals.
+
+![Modification](http://i.imgur.com/1ToQ6ZJ.png)
+
+Attach a patch wire as indicated by the white dash in the picture above (in the top right corner of the back side). This will give you a design that can have at most sixteen indexes in total. But since some cartridges are only 8k in size an make use of either the upper or lower memory bank they can be combined. Then the same index provide two different cartridges and it is just a matter of setting the dipswitches to select which is used. 
 
 This is how it goes when you do the PCB design directly out of your head and bypassing the schematic stage...
 
 The board is availble at [OSHpark as a shared design](https://oshpark.com/shared_projects/bvZLwrlV). 
 
-|  Designator |  Component |  Mouser #  |
+|  Designator |  Component | Vendor  #  |
 |-------------|------------|------------|
 |     U1      | SST39F020A |[804-39SF020A7CPHE](http://www.mouser.se/Search/ProductDetail.aspx?R=SST39SF020A-70-4C-PHE)|
 |     U2      |   74LS07   |[595-SN74LS07DR](http://www.mouser.se/Search/ProductDetail.aspx?R=SN74LS07DR)|
