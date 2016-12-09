@@ -37,5 +37,7 @@ There is a small tool as well, combine, that is used to combine several 8k or 16
 ```
 It is possible to specify many -f options. Each -f option has to be preceeded by -h or -l and an index to specify the destination address in the ROM. a -u is optional to specify use of upper 8k of a 16k cartridge image.
 
+For programming the Flash memory device I used a [Autoelectric TL866A](http://www.autoelectric.cn/EN/TL866_MAIN.html).
+
 
 
