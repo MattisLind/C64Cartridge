@@ -4,6 +4,9 @@ A C64 and C128 cartridge that allow multiple cartridge images inb one physical c
 ![Cartridge](http://i.imgur.com/pkQG7xn.png)
 
 
+![Cartridge front](http://i.imgur.com/1p54mUQ.png)
+
+
 A simple cartridge which can store several switch selecatble images. The type of images is also switch selectable.
 
 Due to a stupid design mistake the upper and lower switch is not independent which means that only in total 16 locations can be used. But since some cartridges make use of only the upper or only the lower part they can shar the same index.
